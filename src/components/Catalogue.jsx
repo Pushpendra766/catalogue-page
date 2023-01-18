@@ -26,6 +26,7 @@ export const Catalogue = ({ category, setStats }) => {
         });
         setStats(categoryStats);
         console.log(categoryStats);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [products]);
 
     return (
