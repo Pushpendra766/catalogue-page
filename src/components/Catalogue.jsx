@@ -3,7 +3,7 @@ import axios from "axios";
 import { Product } from "./Product";
 import Row from "react-bootstrap/Row";
 
-export const Catalogue = ({ category, setStats }) => {
+export const Catalogue = ({ category, setStats, setLoading }) => {
     const baseUrl = "https://fakestoreapi.com/products";
     const [products, setProducts] = useState([]);
     useEffect(() => {
@@ -26,6 +26,7 @@ export const Catalogue = ({ category, setStats }) => {
         });
         setStats(categoryStats);
         console.log(categoryStats);
+        setLoading(false);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [products]);
 

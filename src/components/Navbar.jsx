@@ -1,7 +1,7 @@
 import { React, useState } from "react";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 
-export const NavBar = ({ setCategory }) => {
+export const NavBar = ({ setCategory, setLoading }) => {
     const categories = [
         "All",
         "Men's Clothing",
@@ -24,6 +24,7 @@ export const NavBar = ({ setCategory }) => {
                                         onClick={() => {
                                             setTitle(category);
                                             setCategory(category.toLowerCase());
+                                            setLoading(true);
                                         }}
                                     >
                                         {category}
