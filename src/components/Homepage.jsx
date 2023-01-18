@@ -9,7 +9,6 @@ export const Homepage = () => {
     const [showChart, setShowChart] = useState(false);
     const [stats, setStats] = useState({});
     const [loading, setLoading] = useState(false);
-    console.log(stats);
     return (
         <div>
             <NavBar setCategory={setCategory} setLoading={setLoading} />

@@ -25,7 +25,6 @@ export const Catalogue = ({ category, setStats, setLoading }) => {
                 (categoryStats[product.category] || 0) + 1;
         });
         setStats(categoryStats);
-        console.log(categoryStats);
         setLoading(false);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [products]);
