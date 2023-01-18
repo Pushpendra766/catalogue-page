@@ -31,7 +31,7 @@ export const Catalogue = ({ category, setStats, setLoading }) => {
     }, [products]);
 
     return (
-        <div className="mt-2 px-5 py-5 mx-5 ">
+        <div className="mt-2 px-sm-2 py-5 mx-sm-2 px-md-5 mx-md-5">
             <Row className="gap-3 mx-auto">
                 {products.map(product => {
                     return <Product key={product.id} product={product} />;
